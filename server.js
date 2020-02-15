@@ -4,10 +4,11 @@ const mongoose = require("mongoose");
 const cookieSession = require("cookie-session");
 const passport = require("passport");
 const keys = require("./config/keys");
-
+const path = require("path");
 const PORT = process.env.PORT || 5000;
 require("./models/Users");
 require("./services/passport");
+app.use(express.static(path.join(__dirname, "client/build")));
 
 app.use(
   cookieSession({
