@@ -9,10 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cookie-session": "^1.4.0",
     "cors": "^2.8.5",
+    "express": "^4.17.1",
     "fs": "0.0.1-security",
     "http": "0.0.0",
     "https": "^1.0.0",
+    "mongoose": "^5.9.0",
     "passport-amazon": "^1.0.0",
     "passport-facebook": "^3.0.0",
     "passport-github": "^1.1.0",
