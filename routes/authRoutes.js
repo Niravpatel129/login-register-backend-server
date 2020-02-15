@@ -12,10 +12,15 @@ module.exports = app => {
 
   app.get("/api/logout", (req, res) => {
     req.logout();
+    if (req.user) res.send({ success: "logged out" });
   });
 
   app.get("/api/current_user", (req, res) => {
-    res.send(req.user);
+    if (req.user) {
+      res.send(req.user);
+    } else {
+      res.send({ error: "no user found" });
+    }
   });
 
   app.get("/", (req, res) => {
